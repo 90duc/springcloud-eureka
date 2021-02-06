@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: micro-service
+  profiles:
+    active: dev
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+    default-property-inclusion: ALWAYS
+
+eureka:
+  client:
+     service-url:
+        defaultZone: http://localhost:8180/eureka
+
+server:
+  port: 8081

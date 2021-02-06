@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: eureka-server
+  profiles:
+    active: dev
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+    default-property-inclusion: ALWAYS
+  cloud:
+    config:
+      enabled: false
+
+eureka:
+  server:
+   #enableSelfPreservation: false  #自我保存模式
+   renewalPercentThreshold: 0  #续订阈值
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+#    service-url:
+#      defaultZone: http://localhost:${server.port}/eureka
+
+server:
+  port: 8180
